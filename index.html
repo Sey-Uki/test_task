@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="container__content">
+          <div class="btn_modal">
+            <button id="open__modal" class="blue_btn">Добавить запись</button>
+          </div>
+    
+          <section>
+    
+            <form id="table_form" action="">
+              <table id="table">
+                <thead>
+                  <tr>
+                    <th>Дата</th>
+                    <th>Инструмент <br /> (ценная бумага)</th>
+                    <th>Стоимость</th>
+                  </tr>
+                </thead>
+              </table>
+              <div>
+                <button type="button" class="blue_btn" id="save_btn">Сохранить изменения</button>
+              </div>
+            </form>
+    
+            <div id="overlay"></div>
+            <div class="modal">
+              <form action="" class="form__modal">
+                <div id="close__modal">
+                  Close
+                </div>
+                <input type="text" class="input_br" id="date" placeholder="Дата">
+                <input type="text" class="input_br" id="company" placeholder="Инструмент">
+                <input type="number" class="input_br" id="price" placeholder="Стоимость">
+                <button type="button" class="blue_btn" id="add__btn">Добавить</button>
+                <p class="error-message">Поля не должны быть пустыми</p>
+                <div id="validation">
+                  <h3>Введите данные в следующем формате:</h3>
+                  <div><strong>Дата:</strong> В формате дд.мм.гггг </div>
+                  <div><strong>Инструмент:</strong> Латинские или русские буквы</div>
+                  <div><strong>Цена:</strong> Только численное значение</div>
+                </div>
+              </form>
+            </div>
+    
+            <canvas id="myChart" width="400" height="400"></canvas>
+    
+          </section>
+        </div>
+    
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
